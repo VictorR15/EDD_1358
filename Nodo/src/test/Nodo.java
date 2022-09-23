@@ -56,18 +56,18 @@ public class Nodo<T> {
 //        }
 //    }
 
-    public void estaVacia(){
-        reuturn this.cabeza = null;
-    }
-    public void getTamanio() {
-
-        Nodo copiaCabeza = this.siguiente;
-        int contador=0;
-        while(copiaCabeza != null){
-            copiaCabeza = this.siguiente;
-            contador =+1;
-        }
-        
-        System.out.println("El tamaño es: "+contador);
-    }
+//    public void estaVacia(){
+//        reuturn this.cabeza = null;
+//    }
+//    public void getTamanio() {
+//
+//        Nodo copiaCabeza = this.siguiente;
+//        int contador=0;
+//        while(copiaCabeza != null){
+//            copiaCabeza = this.siguiente;
+//            contador =+1;
+//        }
+//        
+//        System.out.println("El tamaño es: "+contador);
+//    }
 }

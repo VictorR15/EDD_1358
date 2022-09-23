@@ -11,8 +11,8 @@ public class NodoMain {
         head.getSiguiente().setSiguiente(new Nodo<>(69, null));
         System.out.print(head.getSiguiente().getSiguiente());
         System.out.println("");
-        head.estaVacia();
-        head.getTamanio();
+//        head.estaVacia();
+//        head.getTamanio();
 
     }
 
