@@ -74,4 +74,8 @@ public class Nodo<T> {
 
         System.out.println("El tamano es: " + contador);
     }
+    
+    public void setAgregarAlFinal( ){
+        
+    }
 }
