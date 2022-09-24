@@ -46,28 +46,32 @@ public class Nodo<T> {
         return "|" + cabeza + "| -->";
     }
 
-//    public void estaVacia() {
-//
-//        if (this.cabeza == null || getSiguiente() == null) {
-//
-//            System.out.println("El nodo esta vacia");
-//        } else {
-//            System.out.println("No esta vacia ");
-//        }
-//    }
+    public void estaVacia() {
+
+        if (this.cabeza == null || getSiguiente() == null) {
+
+            System.out.println("El nodo esta vacia");
+        } else {
+            System.out.println("No esta vacia ");
+        }
+    }
 
 //    public void estaVacia(){
-//        reuturn this.cabeza = null;
+//        return this.cabeza = null;
 //    }
-//    public void getTamanio() {
-//
-//        Nodo copiaCabeza = this.siguiente;
-//        int contador=0;
-//        while(copiaCabeza != null){
-//            copiaCabeza = this.siguiente;
-//            contador =+1;
-//        }
-//        
-//        System.out.println("El tamaño es: "+contador);
-//    }
+    
+    
+    
+    public void getTamanio() {
+
+        Nodo copiaCabeza = this.getSiguiente();
+        int contador = 0;
+        while (copiaCabeza != null) {
+            copiaCabeza = copiaCabeza.getSiguiente();
+            contador++;
+        }
+        contador = contador + 1;
+
+        System.out.println("El tamano es: " + contador);
+    }
 }
