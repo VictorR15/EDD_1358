@@ -46,22 +46,20 @@ public class Nodo<T> {
         return "|" + cabeza + "| -->";
     }
 
-    public void estaVacia() {
+//    public void estaVacia() {
+//
+//        if (this.cabeza == null || getSiguiente() == null) {
+//
+//            System.out.println("El nodo esta vacia");
+//        } else {
+//            System.out.println("No esta vacia ");
+//        }
+//    }
+    public boolean estaVacia() {
 
-        if (this.cabeza == null || getSiguiente() == null) {
-
-            System.out.println("El nodo esta vacia");
-        } else {
-            System.out.println("No esta vacia ");
-        }
+        return this.cabeza == null;
     }
 
-//    public void estaVacia(){
-//        return this.cabeza = null;
-//    }
-    
-    
-    
     public void getTamanio() {
 
         Nodo copiaCabeza = this.getSiguiente();
@@ -74,8 +72,49 @@ public class Nodo<T> {
 
         System.out.println("El tamano es: " + contador);
     }
-    
-    public void setAgregarAlFinal( ){
+
+    public void setAgregarAlFinal(T valorNuevo) {
+
+        Nodo nuevoNodo = new Nodo(valorNuevo);
+
+        if (estaVacia()) {
+            this.cabeza = valorNuevo;
+        } else {
+            Nodo copiaCabeza = this.siguiente;
+            while (copiaCabeza.getSiguiente() != null) {
+                copiaCabeza = copiaCabeza.getSiguiente();
+
+            }
+            copiaCabeza.setSiguiente(nuevoNodo);
+        }
+
+    }
+
+    public void setAgregarAlPrincipio(T cabeza) {
+
+        Nodo nuevoNodo = new Nodo(cabeza);
+
+        if (estaVacia()) {
+            this.cabeza = cabeza;
+        } else {
+            nuevoNodo.setSiguiente(this.siguiente);
+            this.siguiente = nuevoNodo;
+        }
+
+    }
+
+    public void getImprimirTodo() {
         
+        Nodo nodoImprimir = this.getSiguiente();
+        
+        
+        
+        while (nodoImprimir.getSiguiente() != null) {            
+            
+            System.out.print(nodoImprimir);
+            
+            nodoImprimir = nodoImprimir.getSiguiente();
+        }
+
     }
 }
