@@ -27,6 +27,8 @@ public class Nodo<T> {
         this.siguiente = siguiente;
         this.anterior = anterior;
     }
+    
+   
 
     //CREAMOS LOS METOS DE ACCESO PARA MOSTRAR Y MODIFICAR CADA ATRIBUTO
     public Nodo<T> getAnterior() {
@@ -56,6 +58,35 @@ public class Nodo<T> {
     @Override
     public String toString() {
         return "|" + head + "| -->";
+    }
+    
+    public boolean getHeadVacio(){
+        return this.head == null;
+    }
+    
+    public void getAgregarAlFinal(T Final){
+        
+        Nodo<T> nodoFinal = new Nodo<>(Final);
+        
+        if(getHeadVacio()){
+            this.head = Final;
+        }
+        
+        else{
+
+            Nodo<T> aux = this.siguiente;
+            
+            while(nodoFinal.getSiguiente() != null){
+                
+                nodoFinal = nodoFinal.getSiguiente();
+                
+            }
+            
+            nodoFinal.setSiguiente(aux);
+            nodoFinal.setAnterior(nodoFinal);
+            
+            
+        }
     }
 
 }
