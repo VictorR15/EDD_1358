@@ -15,10 +15,10 @@ public class NodoMain {
         System.out.print(cabeza);
         System.out.print(cabeza.getSiguiente());
         
-        System.out.println(cabeza.getAnterior());
+        //System.out.println(cabeza.getAnterior());
         
         cabeza.getAgregarAlFinal(15);
-        System.out.println(cabeza.getSiguiente().getSiguiente());
+        System.out.print(cabeza.getSiguiente().getSiguiente());
         
         
 

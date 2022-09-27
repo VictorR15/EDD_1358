@@ -78,16 +78,17 @@ public class Nodo<T> {
         Nodo nuevoNodo = new Nodo(valorNuevo);
 
         if (estaVacia()) {
-            this.cabeza = valorNuevo;
+            this.siguiente = nuevoNodo;
         } else {
-            Nodo copiaCabeza = this.siguiente;
-            while (copiaCabeza.getSiguiente() != null) {
-                copiaCabeza = copiaCabeza.getSiguiente();
+            Nodo copiaListaMain = this.siguiente;
+            while (copiaListaMain.getSiguiente() != null) {
+                copiaListaMain = copiaListaMain.getSiguiente();
 
             }
-            copiaCabeza.setSiguiente(nuevoNodo);
+            copiaListaMain.setSiguiente(nuevoNodo);
         }
 
+        //copiaListaMain.setSiguiente(nuevoNodo);
     }
 
     public void setAgregarAlPrincipio(T cabeza) {
@@ -101,18 +102,18 @@ public class Nodo<T> {
             this.siguiente = nuevoNodo;
         }
 
+        this.cabeza = cabeza;
+
     }
 
     public void getImprimirTodo() {
-        
+
         Nodo nodoImprimir = this.getSiguiente();
-        
-        
-        
-        while (nodoImprimir.getSiguiente() != null) {            
-            
+
+        while (nodoImprimir.getSiguiente() != null) {
+
             System.out.print(nodoImprimir);
-            
+
             nodoImprimir = nodoImprimir.getSiguiente();
         }
 

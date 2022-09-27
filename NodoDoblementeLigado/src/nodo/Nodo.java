@@ -27,8 +27,6 @@ public class Nodo<T> {
         this.siguiente = siguiente;
         this.anterior = anterior;
     }
-    
-   
 
     //CREAMOS LOS METOS DE ACCESO PARA MOSTRAR Y MODIFICAR CADA ATRIBUTO
     public Nodo<T> getAnterior() {
@@ -59,34 +57,51 @@ public class Nodo<T> {
     public String toString() {
         return "|" + head + "| -->";
     }
-    
-    public boolean getHeadVacio(){
+
+    public boolean getHeadVacio() {
         return this.head == null;
     }
-    
-    public void getAgregarAlFinal(T Final){
-        
+
+    public void getAgregarAlFinal(T Final) {
+
         Nodo<T> nodoFinal = new Nodo<>(Final);
-        
-        if(getHeadVacio()){
+
+        if (getHeadVacio()) {
             this.head = Final;
-        }
-        
-        else{
+        } else {
 
             Nodo<T> aux = this.siguiente;
-            
-            while(nodoFinal.getSiguiente() != null){
-                
-                nodoFinal = nodoFinal.getSiguiente();
-                
+
+            while (aux.getSiguiente() != null) {
+
+                aux = aux.getSiguiente();
+
             }
-            
-            nodoFinal.setSiguiente(aux);
-            nodoFinal.setAnterior(nodoFinal);
-            
-            
+
+            nodoFinal.setAnterior(aux);
+            aux.setSiguiente(nodoFinal);
+            aux = null;
+            nodoFinal = null;
+
         }
+        
+       
     }
+    
+     public void getAgragarAlInicio(T valorNuevo){
+            
+         Nodo nuevoNodoPrincipio = new Nodo(valorNuevo);
+         
+         if(getHeadVacio()){
+             this.head = valorNuevo;
+         }
+         
+         else{
+             nuevoNodoPrincipio.setSiguiente(this.siguiente);
+             head.setAnterior(valorNuevo);
+             this.head  = nuevoNodoPrincipio;
+         }
+         
+        }
 
 }

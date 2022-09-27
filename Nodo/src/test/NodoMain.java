@@ -19,9 +19,10 @@ public class NodoMain {
         System.out.println("");
         System.out.println(head.estaVacia());
         head.getTamanio();
-        head.setAgregarAlFinal(55);
+        
 //        System.out.println(head.getSiguiente().getSiguiente().getSiguiente().getSiguiente());
-        //head.setAgregarAlPrincipio(99);
+        head.setAgregarAlPrincipio(99);
+        head.setAgregarAlFinal(22);
 
 //        System.out.println(head.getSiguiente().getSiguiente().getSiguiente().getSiguiente().getSiguiente());
         head.getImprimirTodo();
