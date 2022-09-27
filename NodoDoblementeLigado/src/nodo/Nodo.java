@@ -93,12 +93,12 @@ public class Nodo<T> {
          Nodo<T> nuevoNodoPrincipio = new Nodo(valorNuevo);
          
          if(getHeadVacio()){
-             this.head = nuevoNodoPrincipio;
+             this.head = valorNuevo;
          }
          
          else{
-             nuevoNodoPrincipio.setSiguiente(this.siguiente);
-             head.setAnterior(valorNuevo);
+             nuevoNodoPrincipio.setSiguiente(this.head);
+             head.setAnterior(nuevoNodoPrincipio);
              this.head  = nuevoNodoPrincipio;
          }
          
