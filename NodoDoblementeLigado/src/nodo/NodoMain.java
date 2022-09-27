@@ -8,12 +8,10 @@ public class NodoMain {
 
     public static void main(String[] args) {
 
-        Nodo<Integer> cabeza = new Nodo<>(50);
+        Nodo<Integer> cabeza = new Nodo<>();
         
-        cabeza.setSiguiente(new Nodo<>(4, null, cabeza));
 
-        System.out.print(cabeza);
-        System.out.print(cabeza.getSiguiente());
+       cabeza.getAgragarAlInicio(55);
         
         //System.out.println(cabeza.getAnterior());
         

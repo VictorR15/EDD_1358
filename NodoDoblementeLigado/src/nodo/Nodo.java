@@ -90,10 +90,10 @@ public class Nodo<T> {
     
      public void getAgragarAlInicio(T valorNuevo){
             
-         Nodo nuevoNodoPrincipio = new Nodo(valorNuevo);
+         Nodo<T> nuevoNodoPrincipio = new Nodo(valorNuevo);
          
          if(getHeadVacio()){
-             this.head = valorNuevo;
+             this.head = nuevoNodoPrincipio;
          }
          
          else{
