@@ -118,30 +118,57 @@ public class NodoDoblementeLigado<T> {
 
         while (nodoCopia != null) {
 
-            nodoCopia=nodoCopia.getSiguiente();
+            nodoCopia = nodoCopia.getSiguiente();
             contador++;
 
         }
-        System.out.println("Tamanio: "+contador);
+        System.out.println("Tamanio: " + contador);
     }
-    
-    public void eliminarElPrimero(){
+
+    public void eliminarElPrimero() {
         Nodo nodoCopia = this.head;
-        
+
         this.head = nodoCopia.getSiguiente();
     }
-    
-    public void eliminarElUltimo(){
+
+    public void eliminarElUltimo() {
         Nodo nodoCopia = this.head;
-        
+
         while (nodoCopia != null) {
 
             nodoCopia = nodoCopia.getSiguiente();
             System.out.println(nodoCopia);
+
+        }
+
+    }
+    
+    public void buscarValor(int valorMostrar){
+        Nodo nodoCopia = this.head;
+        
+        for (int i = 1; i <= valorMostrar-1; i++) {
             
+            nodoCopia = nodoCopia.getSiguiente();
+            
+        }
+        System.out.println(nodoCopia);
+    }
+    
+    public void actualizarValor(int posicion, T valorNuevo){
+        
+        Nodo nuevoValor = new Nodo(valorNuevo);
+        Nodo nododCopia = this.head;
+        
+        
+        for (int i = 1; i <= posicion -1; i++) {
+            
+            nododCopia = nododCopia.getSiguiente();
         }
         
         
+        nododCopia = nuevoValor;
+        
+        System.out.println(nododCopia);
     }
 
 }

@@ -28,8 +28,17 @@ public class NodoMain {
         lista.eliminarElPrimero();
         lista.imprimirTodoALV();
         System.out.println("----------------");
-        lista.eliminarElUltimo();
+        //lista.eliminarElUltimo();
         //lista.imprimirTodoALV();
+        
+        
+        
+        lista.buscarValor(2);
+        System.out.println("-----------------");
+        
+        lista.actualizarValor(2, 33);
+        lista.imprimirTodoALV();
+        
         
         
 
