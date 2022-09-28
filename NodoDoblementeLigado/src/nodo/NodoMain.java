@@ -8,15 +8,28 @@ public class NodoMain {
 
     public static void main(String[] args) {
 
-        Nodo<Integer> cabeza = new Nodo<>();
+        NodoDoblementeLigado<Integer> lista = new NodoDoblementeLigado<>();
+
+        lista.getAgregarAlFinal(99);
+        lista.getAgregarAlFinal(55);
+        lista.getAgregarAlFinal(9);
+        lista.getAgregarAlFinal(88);
+        lista.getAgregarAlFinal(100);
         
 
-       cabeza.getAgragarAlInicio(55);
-        
-        //System.out.println(cabeza.getAnterior());
-        
-        cabeza.getAgregarAlFinal(15);
-        System.out.print(cabeza.getSiguiente().getSiguiente());
+        lista.imprimirTodoALV();
+        lista.AgregarDespuesDe(56, 2);
+
+        //lista.eliminarALV(3);
+        lista.imprimirTodoALV();
+        lista.eliminarALV(2);
+        lista.imprimirTodoALV();
+        lista.getTamanio();
+        lista.eliminarElPrimero();
+        lista.imprimirTodoALV();
+        System.out.println("----------------");
+        lista.eliminarElUltimo();
+        //lista.imprimirTodoALV();
         
         
 

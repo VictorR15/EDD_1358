@@ -55,53 +55,9 @@ public class Nodo<T> {
 
     @Override
     public String toString() {
-        return "|" + head + "| -->";
+        return "<--|" + head + "|-->";
     }
 
-    public boolean getHeadVacio() {
-        return this.head == null;
-    }
-
-    public void getAgregarAlFinal(T Final) {
-
-        Nodo<T> nodoFinal = new Nodo<>(Final);
-
-        if (getHeadVacio()) {
-            this.head = Final;
-        } else {
-
-            Nodo<T> aux = this.siguiente;
-
-            while (aux.getSiguiente() != null) {
-
-                aux = aux.getSiguiente();
-
-            }
-
-            nodoFinal.setAnterior(aux);
-            aux.setSiguiente(nodoFinal);
-            aux = null;
-            nodoFinal = null;
-
-        }
-        
-       
-    }
     
-     public void getAgragarAlInicio(T valorNuevo){
-            
-         Nodo<T> nuevoNodoPrincipio = new Nodo(valorNuevo);
-         
-         if(getHeadVacio()){
-             this.head = valorNuevo;
-         }
-         
-         else{
-             nuevoNodoPrincipio.setSiguiente(this.head);
-             head.setAnterior(nuevoNodoPrincipio);
-             this.head  = nuevoNodoPrincipio;
-         }
-         
-        }
 
 }
