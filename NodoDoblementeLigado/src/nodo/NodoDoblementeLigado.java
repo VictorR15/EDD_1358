@@ -142,33 +142,36 @@ public class NodoDoblementeLigado<T> {
         }
 
     }
-    
-    public void buscarValor(int valorMostrar){
+
+    public void buscarValor(int valorMostrar) {
         Nodo nodoCopia = this.head;
-        
-        for (int i = 1; i <= valorMostrar-1; i++) {
-            
+
+        for (int i = 1; i <= valorMostrar - 1; i++) {
+
             nodoCopia = nodoCopia.getSiguiente();
-            
+
         }
         System.out.println(nodoCopia);
     }
-    
-    public void actualizarValor(int posicion, T valorNuevo){
-        
+
+    public void actualizarValor(int posicion, T valorNuevo) {
+
         Nodo nuevoValor = new Nodo(valorNuevo);
         Nodo nododCopia = this.head;
-        
-        
-        for (int i = 1; i <= posicion -1; i++) {
-            
+
+        for (int i = 1; i <= posicion - 1; i++) {
+
             nododCopia = nododCopia.getSiguiente();
+
         }
-        
-        
+
         nododCopia = nuevoValor;
-        
+        nododCopia.setSiguiente(nododCopia.getSiguiente());
+        nododCopia.setAnterior(nododCopia.getAnterior());
+
         System.out.println(nododCopia);
+        System.out.println(nododCopia.getSiguiente());
+        System.out.println(nododCopia.getAnterior());
     }
 
 }
