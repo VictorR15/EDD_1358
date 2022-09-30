@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sumaDeVectoresEyM", "sumaDeVectoresEyM\sumaDeVectoresEyM.csproj", "{C36CBFDE-F161-4A6F-9B25-378275B82E77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C36CBFDE-F161-4A6F-9B25-378275B82E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36CBFDE-F161-4A6F-9B25-378275B82E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C36CBFDE-F161-4A6F-9B25-378275B82E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C36CBFDE-F161-4A6F-9B25-378275B82E77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47886CE5-C430-4858-8271-E10F95FFDD97}
+	EndGlobalSection
+EndGlobal
