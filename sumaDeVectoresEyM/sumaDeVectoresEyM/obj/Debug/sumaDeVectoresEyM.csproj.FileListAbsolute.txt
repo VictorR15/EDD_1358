@@ -6,3 +6,11 @@ C:\Users\victo\OneDrive\Documentos\Tareas EstructuraDeDatos\sumaDeVectoresEyM\su
 C:\Users\victo\OneDrive\Documentos\Tareas EstructuraDeDatos\sumaDeVectoresEyM\sumaDeVectoresEyM\obj\Debug\sumaDeVectoresEyM.csproj.CoreCompileInputs.cache
 C:\Users\victo\OneDrive\Documentos\Tareas EstructuraDeDatos\sumaDeVectoresEyM\sumaDeVectoresEyM\obj\Debug\sumaDeVectoresEyM.exe
 C:\Users\victo\OneDrive\Documentos\Tareas EstructuraDeDatos\sumaDeVectoresEyM\sumaDeVectoresEyM\obj\Debug\sumaDeVectoresEyM.pdb
+C:\Users\victo\OneDrive\Documentos\CopiaEDD\EDD_1358\sumaDeVectoresEyM\sumaDeVectoresEyM\bin\Debug\sumaDeVectoresEyM.exe.config
+C:\Users\victo\OneDrive\Documentos\CopiaEDD\EDD_1358\sumaDeVectoresEyM\sumaDeVectoresEyM\bin\Debug\sumaDeVectoresEyM.exe
+C:\Users\victo\OneDrive\Documentos\CopiaEDD\EDD_1358\sumaDeVectoresEyM\sumaDeVectoresEyM\bin\Debug\sumaDeVectoresEyM.pdb
+C:\Users\victo\OneDrive\Documentos\CopiaEDD\EDD_1358\sumaDeVectoresEyM\sumaDeVectoresEyM\obj\Debug\sumaDeVectoresEyM.csproj.AssemblyReference.cache
+C:\Users\victo\OneDrive\Documentos\CopiaEDD\EDD_1358\sumaDeVectoresEyM\sumaDeVectoresEyM\obj\Debug\sumaDeVectoresEyM.csproj.SuggestedBindingRedirects.cache
+C:\Users\victo\OneDrive\Documentos\CopiaEDD\EDD_1358\sumaDeVectoresEyM\sumaDeVectoresEyM\obj\Debug\sumaDeVectoresEyM.csproj.CoreCompileInputs.cache
+C:\Users\victo\OneDrive\Documentos\CopiaEDD\EDD_1358\sumaDeVectoresEyM\sumaDeVectoresEyM\obj\Debug\sumaDeVectoresEyM.exe
+C:\Users\victo\OneDrive\Documentos\CopiaEDD\EDD_1358\sumaDeVectoresEyM\sumaDeVectoresEyM\obj\Debug\sumaDeVectoresEyM.pdb
