@@ -135,8 +135,14 @@ namespace sumaDeVectoresEyM
                 Console.Write("↓");
             }
             Console.WriteLine("");
-            
-            
+            Console.WriteLine("");
+
+            Console.WriteLine("Victor Manuel Ramirez Martinez");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+
+
 
 
 
