@@ -29,6 +29,13 @@ public class Nodo<T> {
     public void setBase(T base) {
         this.base = base;
     }
+
+    @Override
+    public String toString() {
+        
+        
+        return "|"+this.base+"|" ;
+    }
     
     
     
