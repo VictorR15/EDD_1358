@@ -59,5 +59,9 @@ public class Nodo<T> {
     }
 
     
+    /*ESTA CLASE ES SOLO PARA CREAR EL NODO Y LO QUE VA A TENER AL CREAR UNO
+    NUEVO
+    */
+    
 
 }
