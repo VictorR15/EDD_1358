@@ -9,24 +9,16 @@ public class Nodo<T> {
     private T base;
     private Nodo<T> top;
 
-    
-    //CONSTRUCTOR POR DEFECTO
-    
-    public Nodo() {
-    }
-    
     //CONSTRUCTOR PARA DECLAR LA BASE 
-    
-    public Nodo(T base){
-        
+    public Nodo(T base) {
+
         this.base = base;
     }
-    
+
     //CONSTRUCTOR PARA CREAR UN NUEVO TOP
-    
-    public Nodo(T base, Nodo<T> top) {
+    public Nodo(T base,Nodo<T> top) {
         this.base = base;
-        this.top = top;
+        this.top = null;
     }
 
     public Nodo<T> getTop() {
@@ -47,11 +39,8 @@ public class Nodo<T> {
 
     @Override
     public String toString() {
-        
-        return "|"+this.base+"|" ;
+
+        return "|" + this.base + "|";
     }
-    
-    
-    
-    
+
 }
