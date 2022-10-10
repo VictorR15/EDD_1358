@@ -13,6 +13,7 @@ public class Nodo<T> {
     public Nodo(T base) {
 
         this.base = base;
+        this.top = null;
     }
 
     //CONSTRUCTOR PARA CREAR UN NUEVO TOP
