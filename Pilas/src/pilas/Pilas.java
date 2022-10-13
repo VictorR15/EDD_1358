@@ -6,86 +6,91 @@ package pilas;
  */
 public class Pilas<T> {
 
-    private Nodo<T> ultimoValor;
-    int tamanio = 0;
-    
+    Nodo<T> listaPila;
+    int tamanio;
+
+    public Pilas() {
+        this.listaPila = null;
+        this.tamanio = 0;
+    }
 
     //CHECA SI ESTA VACIA
     public boolean isEmpty() {
-        return this.ultimoValor == null;
+
+        return this.listaPila == null;
     }
 
-    //MUESTRA LA LONGITUD DE LA PILA 
-    public void length() {
+    //
+    public void vaciar() {
 
-        Nodo pilaCopia = this.ultimoValor;
-        int contador = 0;
+        this.listaPila = null;
+        this.tamanio = 0;
 
-        while (pilaCopia.getTop() != null) {
+    }
 
-            pilaCopia = pilaCopia.getTop();
-            contador++;
+    //LONGITUD DE LA PILA
+    public int length() {
 
+        System.out.println("" + tamanio);
+        return this.tamanio;
+    }
+
+    //INGRESA UN VALOR NUEVO
+    public void push(T value) {
+
+        Nodo nuevoValor = new Nodo(value);
+//        this.listaPila = nuevoValor;
+
+        this.listaPila = nuevoValor;
+
+//        if (this.isEmpty()) {
+//
+//            this.listaPila = nuevoValor;
+//
+//        } else {
+//
+//            
+////            Nodo aux = this.listaPila;
+////            
+////            while(aux.getTop() != null){
+////                
+////                aux = aux.getTop();
+////                
+////            }
+////
+////            aux.setTop(nuevoValor);
+////            this.listaPila = aux;
+//
+//        }
+        tamanio++;
+    }
+
+    //MUESTRA EL TOP E ELIMINA EL VALOR
+    public T pop() {
+
+        if (this.isEmpty()) {
+
+            T base = this.listaPila.base;
+            this.listaPila = base.top;
+
+            return base;
         }
 
-        System.out.println("Longitud de la pila: " + contador);
+        tamanio--;
 
     }
 
     //MUESTRA EL TOP SIN ELIMINARLO
     public void peek() {
 
-        Nodo pilaCopia = this.ultimoValor;
+        Nodo pilaCopia = this.listaPila;
 
-        while (pilaCopia.getTop() != null) {
-
-            pilaCopia = pilaCopia.getTop();
-
-        }
-
+//        while (pilaCopia.getTop() != null) {
+//
+//            pilaCopia = pilaCopia.getTop();
+//
+//        }
         System.out.println(pilaCopia);
-
-    }
-
-    //INGRESA UN VALOR NUEVO
-    public void push(T value) {
-
-        Nodo<T> pilaCopia = new Nodo(value);
-
-        if (isEmpty()) {
-
-            this.ultimoValor = pilaCopia;
-        }
-        else{
-            
-            Nodo<T> aux = this.ultimoValor;
-            
-            while (aux.getTop() != null) {                
-                
-                aux = aux.getTop();
-                
-            }
-            
-            this.ultimoValor = aux;
-            
-        }
-    }
-
-    //MUESTRA EL TOP E ELIMINA EL VALOR
-    public void pop() {
-
-        Nodo<T> pilaCopia = this.ultimoValor;
-        Nodo<T> aux = this.ultimoValor;
-
-        while (aux.getTop() != null) {
-
-            aux = aux.getTop();
-
-        }
-
-        pilaCopia = aux;
-
-        System.out.println("" + pilaCopia);
 
     }
 

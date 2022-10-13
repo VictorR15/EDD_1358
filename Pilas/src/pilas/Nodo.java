@@ -6,42 +6,45 @@ package pilas;
  */
 public class Nodo<T> {
 
-    private T base;
-    private Nodo<T> top;
+    T base;
+    Nodo<T> sig;
+
+//    public Nodo() {
+//    }
 
     //CONSTRUCTOR PARA DECLAR LA BASE 
-    public Nodo(T base) {
-
+    
+    public Nodo(T base, Nodo<T> sig) {
         this.base = base;
-        this.top = null;
+        this.sig = sig;
     }
+    
 
-    //CONSTRUCTOR PARA CREAR UN NUEVO TOP
-    public Nodo(T base,Nodo<T> top) {
-        this.base = base;
-        this.top = null;
-    }
+//    CONSTRUCTOR PARA CREAR UN NUEVO TOP
+//    public Nodo(T base, Nodo<T> top) {
+//        this.base = base;
+//        this.top = top;
+//    }
+//    public T getBase() {
+//        return base;
+//    }
+//
+//    public void setBase(T base) {
+//        this.base = base;
+//    }
+//
+//    public Nodo<T> getTop() {
+//        return top;
+//    }
+//
+//    public void setTop(Nodo<T> top) {
+//        this.top = top;
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "|"+base+"|";
+//    }
 
-    public Nodo<T> getTop() {
-        return top;
-    }
-
-    public void setTop(Nodo<T> top) {
-        this.top = top;
-    }
-
-    public T getBase() {
-        return base;
-    }
-
-    public void setBase(T base) {
-        this.base = base;
-    }
-
-    @Override
-    public String toString() {
-
-        return "|" + this.base + "|";
-    }
-
+    
 }
