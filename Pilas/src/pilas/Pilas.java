@@ -6,24 +6,24 @@ package pilas;
  */
 public class Pilas<T> {
 
-    Nodo<T> listaPila;
+    Nodo<T> tope;
     int tamanio;
 
     public Pilas() {
-        this.listaPila = null;
+        this.tope = null;
         this.tamanio = 0;
     }
 
     //CHECA SI ESTA VACIA
     public boolean isEmpty() {
 
-        return this.listaPila == null;
+        return this.tope == null;
     }
 
     //
     public void vaciar() {
 
-        this.listaPila = null;
+        this.tope = null;
         this.tamanio = 0;
 
     }
@@ -37,6 +37,17 @@ public class Pilas<T> {
 
     //INGRESA UN VALOR NUEVO
     public void push(T value) {
+
+        Nodo nuevoValor = new Nodo(value);
+
+        if (isEmpty()) {
+
+            this.tope = nuevoValor;
+
+        }
+        else{
+            
+        }
 
     }
 
