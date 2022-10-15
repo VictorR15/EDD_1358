@@ -6,33 +6,25 @@ package pilas;
  */
 public class Nodo<T> {
 
-    private T valorInicial;
+    private T ultimoValor;
     private Nodo<T> sig;
 
-    public Nodo(T _base) {
-        this.valorInicial = _base;
+    public Nodo(T _UltimoValor) {
+        this.ultimoValor = _UltimoValor;
     }
 
     //CONSTRUCTOR PARA DECLAR LA BASE 
-    
-    public Nodo(T _base, Nodo<T> _sig) {
-        this.valorInicial = _base;
+    public Nodo(T _UltimoValor, Nodo<T> _sig) {
+        this.ultimoValor = _UltimoValor;
         this.sig = _sig;
     }
-    
 
-//    CONSTRUCTOR PARA CREAR UN NUEVO TOP
-//    public Nodo(T base, Nodo<T> top) {
-//        this.base = base;
-//        this.top = top;
-//    }
-
-    public T getBase() {
-        return valorInicial;
+    public T getUltimoValor() {
+        return ultimoValor;
     }
 
-    public void setBase(T base) {
-        this.valorInicial = base;
+    public void setUltimoValor(T valorInicial) {
+        this.ultimoValor = valorInicial;
     }
 
     public Nodo<T> getSig() {
@@ -42,7 +34,12 @@ public class Nodo<T> {
     public void setSig(Nodo<T> sig) {
         this.sig = sig;
     }
-   
 
+    @Override
+    public String toString() {
+        return ultimoValor + "\n";
+    }
     
+    
+
 }

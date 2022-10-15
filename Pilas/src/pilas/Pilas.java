@@ -6,24 +6,24 @@ package pilas;
  */
 public class Pilas<T> {
 
-    Nodo<T> tope;
+    Nodo<T> top;
     int tamanio;
 
     public Pilas() {
-        this.tope = null;
+        this.top = null;
         this.tamanio = 0;
     }
 
     //CHECA SI ESTA VACIA
     public boolean isEmpty() {
 
-        return this.tope == null;
+        return this.top == null;
     }
 
     //
     public void vaciar() {
 
-        this.tope = null;
+        this.top = null;
         this.tamanio = 0;
 
     }
@@ -35,29 +35,71 @@ public class Pilas<T> {
         return this.tamanio;
     }
 
-    //INGRESA UN VALOR NUEVO
-    public void push(T value) {
-
-        Nodo nuevoValor = new Nodo(value);
+    //MUESTRA EL TOP SIN ELIMINARLO
+    public T peek() {
 
         if (isEmpty()) {
+            return null;
 
-            this.tope = nuevoValor;
+        } else {
 
-        }
-        else{
-            
+            System.out.println("" + top);
+            return top.getUltimoValor();
+
         }
 
     }
 
     //MUESTRA EL TOP Y LO ELIMINA EL VALOR
-    public void pop() {
+    public T pop() {
+
+        if (isEmpty()) {
+            return null;
+
+        } else {
+
+            T elemento = this.top.getUltimoValor();
+            Nodo<T> aux = this.top.getSig();
+            this.top = null;
+            this.top = aux;
+            this.tamanio--;
+            this.top.toString();
+
+            System.out.println("" + elemento);
+            return elemento;
+
+        }
 
     }
 
-    //MUESTRA EL TOP SIN ELIMINARLO
-    public void peek() {
+    //INGRESA UN VALOR NUEVO
+    public void push(T value) {
+
+        Nodo<T> nuevoValor = new Nodo<>(value, this.top);
+
+        this.top = nuevoValor;
+        this.tamanio++;
+
+    }
+
+    public String toStringPila() {
+        if (isEmpty()) {
+            String vacia = "La pila esta vacia";
+            return vacia;
+
+        } else {
+
+            Nodo<T> aux = this.top;
+            String resultado = "";
+
+            while (aux != null) {
+
+                resultado += aux.toString();
+                aux = aux.getSig();
+            }
+
+            return resultado;
+        }
 
     }
 

@@ -19,14 +19,22 @@ public class PilasMain {
         pila1.push("T");
         pila1.push("O");
         pila1.push("R");
+        System.out.println("-------------------");
+
+        pila1.peek();
+        System.out.println("-------------------");
 
         pila1.pop();
+        System.out.println("-------------------");
+
         pila1.pop();
+        System.out.println("-------------------");
 
         pila1.length();
-        pila1.isEmpty();
+        System.out.println("-------------------");
 
-        System.out.println("------------");
+        System.out.println(pila1.toStringPila());
+
 //        pila1.peek();
 //        
 //        System.out.println("---------------------");
@@ -42,7 +50,6 @@ public class PilasMain {
 //        pila2.toString();
 //        
 //        System.out.println(""+pila2);
-
     }
 
 }
