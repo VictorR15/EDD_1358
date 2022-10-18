@@ -11,7 +11,10 @@ public class LabMain {
 
         Laberinto lab1 = new Laberinto();
         
-        lab1.imprimirTabla();
+        lab1.caminoSalida(1, 1);
+        System.out.println(" ");
+        
+        
 
     }
     
