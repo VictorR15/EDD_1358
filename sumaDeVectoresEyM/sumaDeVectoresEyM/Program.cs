@@ -109,14 +109,14 @@ namespace sumaDeVectoresEyM
 
             Console.WriteLine("");
             resultante = Math.Sqrt((Math.Pow(sumatoriaDeLosComponentesX, 2) + (Math.Pow(sumatoriaDeLosComponentesY, 2))));
-            Console.WriteLine("La resultante: {0}",resultante);
+            Console.WriteLine("La resultante: {0}", Math.Round(resultante));
 
 
             //SACAMOS EL RESULTADO DEL ANGULO Y LO IMPRIMIMOS 
 
             Console.WriteLine("");
             gradosResultado = Math.Atan((sumatoriaDeLosComponentesY/sumatoriaDeLosComponentesX)) * (180 / Math.PI);
-            Console.WriteLine("Los grados: {0}",gradosResultado);
+            Console.WriteLine("Los grados: {0}", Math.Round(gradosResultado));
             Console.WriteLine("");
 
 
