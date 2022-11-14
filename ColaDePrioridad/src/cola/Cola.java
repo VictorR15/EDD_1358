@@ -6,18 +6,18 @@ package cola;
  */
 public class Cola <T>{
 
-    Nodo<T> datoCola;
-    int[] tam;
-    
+    Nodo<T>[] datoCola;
+
     public Cola() {
     }
-    
-    public Cola(int[] tam){
-        this.tam = tam;
-    }
 
-    public Cola(Nodo<T> datoCola) {
+    public Cola(Nodo<T>[] datoCola) {
         this.datoCola = datoCola;
+    }
+    
+    public boolean is_empty(){
+        
+        return this.datoCola == null;
     }
     
     
