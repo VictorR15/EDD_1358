@@ -8,14 +8,13 @@ package cola;
  */
 public class Nodo <T>{
    
-    private int prioridad;
+    
     private T dato;
 
     public Nodo() {
     }
 
-    public Nodo(int prioridad, T dato) {
-        this.prioridad = prioridad;
+    public Nodo(T dato) {
         this.dato = dato;
     }
 
@@ -27,18 +26,12 @@ public class Nodo <T>{
         this.dato = dato;
     }
 
-    public int getPrioridad() {
-        return prioridad;
-    }
-
-    public void setPrioridad(int prioridad) {
-        this.prioridad = prioridad;
-    }
-
     @Override
     public String toString() {
-        return "Nodo{" + "prioridad=" + prioridad + ", dato=" + dato + '}';
+        return "Nodo{" + "dato=" + dato + '}';
     }
+
+    
     
     
    
